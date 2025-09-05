@@ -1,0 +1,168 @@
+
+ 1. What is Node.js, and why is it used? 
+👉 Node.js is a runtime environment built on Chrome’s V8 engine. It’s used for building scalable, high-performance, event-driven applications like APIs, real-time apps, and microservices.
+
+ 2. What are the main features of Node.js? 
+👉 Asynchronous I/O, single-threaded, event-driven, fast execution with V8 engine, cross-platform, large package ecosystem (NPM).
+
+ 3. Explain the V8 engine in Node.js. 
+👉 V8 is Google’s open-source JavaScript engine that compiles JavaScript into machine code for fast execution.
+
+ 4. What is non-blocking I/O? 
+👉 It allows Node.js to continue executing other tasks while I/O operations (like file or DB access) run in the background.
+
+ 5. Difference between synchronous and asynchronous code in Node.js? 
+👉 Synchronous: Executes line by line, blocking further code.
+👉 Asynchronous: Executes without waiting, uses callbacks, promises, or async/await.
+
+ 6. What is the Event Loop in Node.js? 
+👉 It’s the mechanism that handles asynchronous operations, allowing Node.js to process non-blocking tasks in a single thread.
+
+ 7. Difference between `setTimeout()`, `setImmediate()`, and `process.nextTick()`? 
+👉 `setTimeout`: Executes after specified delay.
+👉 `setImmediate`: Executes after the current poll phase.
+👉 `process.nextTick`: Executes immediately after the current operation.
+
+ 8. What are Node.js modules? 
+👉 Modules are reusable blocks of code. Node.js supports  CommonJS (`require`)  and  ES Modules (`import`) .
+
+ 9. What is NPM? Difference between `dependencies` and `devDependencies`? 
+👉 NPM is Node’s package manager.
+
+* `dependencies`: Needed for production.
+* `devDependencies`: Only needed for development/testing.
+
+ 10. Difference between `require()` and `import`? 
+👉 `require()` → CommonJS (synchronous).
+👉 `import` → ES Modules (asynchronous, modern standard).
+
+ 11. What are global objects in Node.js? 
+👉 Examples: `__dirname`, `__filename`, `process`, `Buffer`, `console`, `global`.
+
+ 12. What are buffers in Node.js? 
+👉 Buffers are used to handle binary data (like files, streams) in Node.js.
+
+ 13. What are streams in Node.js? Types? 
+👉 Streams process data in chunks.
+Types: Readable, Writable, Duplex, Transform.
+
+ 14. Difference between `fs.readFile()` and `fs.createReadStream()`? 
+👉 `fs.readFile`: Reads entire file into memory (blocking for large files).
+👉 `createReadStream`: Reads file in chunks (efficient for large files).
+
+ 15. Difference between Node.js and multithreaded platforms (like Java/PHP)? 
+👉 Node.js uses a  single-threaded, event-driven model , while Java/PHP use multi-threading for concurrency.
+
+
+ 16. What are callbacks in Node.js? 
+👉 Functions passed as arguments to be executed later, often used in async tasks.
+
+ 17. Difference between callbacks, promises, and async/await? 
+👉 Callbacks → Nested, messy.
+👉 Promises → Cleaner, `.then()`, `.catch()`.
+👉 Async/await → Simplified syntax for promises.
+
+ 18. How do you handle errors in Node.js? 
+👉 Using try/catch, error-first callbacks, `.catch()` in promises, or Express error middleware.
+
+ 19. What is middleware in Express.js? 
+👉 Functions that execute during request-response lifecycle (e.g., auth, logging, validation).
+
+ 20. How does routing work in Express.js? 
+👉 Routes define endpoints (`app.get('/path', handler)`), handling specific HTTP methods.
+
+ 21. What is CORS, and how do you handle it in Node.js? 
+👉 Cross-Origin Resource Sharing. Handled with the `cors` package (`app.use(cors())`).
+
+ 22. How do you connect Node.js with MongoDB? 
+👉 Using MongoDB driver or Mongoose library. Example: `mongoose.connect(uri)`.
+
+ 23. What is Mongoose, and why is it used? 
+👉 Mongoose is an ODM (Object Data Modeling) library that provides schemas and models for MongoDB.
+
+ 24. Difference between `find()`, `findOne()`, and `findById()` in Mongoose? 
+👉 `find()` → Returns array of documents.
+👉 `findOne()` → Returns first matching doc.
+👉 `findById()` → Finds by `_id`.
+
+ 25. How do you handle authentication in Node.js? 
+👉 Using JWT (jsonwebtoken), Passport.js, or OAuth.
+
+ 26. How do you manage environment variables in Node.js? 
+👉 Using `process.env` and `.env` files with the `dotenv` package.
+
+ 27. Difference between `process` and `os` modules? 
+👉 `process`: Info about current Node.js process.
+👉 `os`: Info about system resources (CPU, memory).
+
+ 28. How do you handle file uploads in Node.js? 
+👉 Using `multer` or `busboy` middleware.
+
+ 29. What is clustering in Node.js? 
+👉 Running multiple Node.js processes (workers) to utilize multi-core CPUs.
+
+ 30. Difference between child processes and worker threads? 
+👉 Child processes → Independent, use IPC.
+👉 Worker threads → Share memory with main thread.
+
+ 31. How do you implement logging in Node.js? 
+👉 Using `winston`, `morgan`, or built-in `console`.
+
+ 32. What is the role of `package-lock.json`? 
+👉 Locks exact versions of dependencies to ensure consistency.
+
+ 33. What is nodemon, and why is it helpful? 
+👉 A dev tool that restarts the server automatically when code changes.
+
+ 34. What are REST APIs, and how do you implement them in Express.js? 
+👉 REST APIs follow CRUD principles using HTTP methods (GET, POST, PUT, DELETE). Implemented with Express routes.
+
+ 35. What is rate limiting, and how to apply it in Express.js? 
+👉 Restricts number of requests per user/IP. Implemented with `express-rate-limit`.
+
+ 36. Explain the architecture of Node.js. 
+👉 Node.js is single-threaded, event-driven, uses the V8 engine, libuv for async I/O, and event loop for concurrency.
+
+ 37. What is libuv, and how does it help Node.js? 
+👉 A C library that provides an event loop and thread pool for async I/O operations.
+
+ 38. How does Node.js handle concurrency? 
+👉 Using the event loop + async callbacks + thread pool.
+
+ 39. Difference between microtasks and macrotasks in Event Loop? 
+👉 Microtasks: Promises, `process.nextTick()`.
+👉 Macrotasks: setTimeout, setInterval, setImmediate.
+
+ 40. How does `process.nextTick()` work internally? 
+👉 It adds a callback to the microtask queue, executed before the next event loop iteration.
+
+ 41. What are worker threads in Node.js? 
+👉 A way to run JavaScript in parallel threads within the same process (introduced in Node.js v10.5+).
+
+ 42. How do you scale a Node.js application? 
+👉 Using clustering, load balancers (NGINX), horizontal scaling (multiple servers), or containerization (Docker/Kubernetes).
+
+ 43. How do you secure an Express.js API? 
+👉 Input validation, JWT auth, HTTPS, rate limiting, Helmet.js, and avoiding eval/unsafe code.
+
+ 44. What is Helmet.js, and why is it used? 
+👉 A middleware for securing Express apps by setting HTTP headers (e.g., CSP, HSTS).
+
+ 45. How do you prevent SQL/NoSQL injection in Node.js? 
+👉 Use prepared statements, parameterized queries, input validation, and ORM/ODM libraries.
+
+ 46. How do you detect and fix memory leaks in Node.js? 
+👉 Using tools like Chrome DevTools, `clinic.js`, `node --inspect`, heap snapshots.
+
+ 47. What are WebSockets in Node.js? 
+👉 A protocol for full-duplex, persistent communication between client and server.
+
+ 48. What is GraphQL, and how does it compare with REST? 
+👉 GraphQL is a query language for APIs. Unlike REST, it allows fetching only required data with a single endpoint.
+
+ 49. What are some best practices for structuring a Node.js project? 
+👉 Use MVC pattern, environment configs, modular routes, middlewares, logging, proper error handling.
+
+ 50. How do you deploy a Node.js application in production? 
+👉 Using PM2 for process management, NGINX for load balancing, Docker/Kubernetes for scaling, and cloud platforms (AWS, Azure, GCP).
+
