@@ -1,42 +1,68 @@
 1. What is Express.js, and why do you use it?
+
 Express.js is a web application framework for Node.js.
 It is an open-source platform for building server-side applications in JavaScript.
 It provides excellent features and tools to developers to develop web applications efficiently. 
 Express.js helps developers to create and manage their applications and offers a wide range of customization options. 
 
 2. How does Express.js handle routing?
+
 Express.js has a simple routing system that allows developers to define and manage application routes.
 Routes can be determined using the app.get() and app.post() methods. 
 It can be associated with callback functions executed when a request is made to the route.
 
 3. How does Express.js handle middleware?
-Express.js has a middleware system that allows developers to define and manage middleware functions. These functions can perform tasks such as authentication, validation, or modification of request and response objects. Middleware functions are executed in the order they are defined. They can be added to the application using the app.use() method.
+
+Express.js has a middleware system that allows developers to define and manage middleware functions. 
+These functions can perform tasks such as authentication, validation, or modification of request and response objects.
+Middleware functions are executed in the order they are defined. 
+They can be added to the application using the app.use() method.
 
 4. How does Express.js handle request and response objects?
-Express.js has a request and response object system that provides access to information about incoming requests and outgoing responses. The request object contains information about the incoming request, such as the URL, method, and headers. The response object is used to send a response back to the client. Developers can use methods such as res.send(), res.json(), and res.render() to send responses to the client.
+
+Express.js has a request and response object system that provides access to information about incoming requests and outgoing responses.
+The request object contains information about the incoming request, such as the URL, method, and headers.
+The response object is used to send a response back to the client. 
+Developers can use methods such as res.send(), res.json(), and res.render() to send responses to the client.
 
 5. What is the difference between Express.js and Node.js?
-Feature	Express.js	Node.js
-Type	Framework	Runtime environment
-Language	JavaScript	JavaScript
-Purpose	To build web applications	To run JavaScript code outside of a browser
-Features	Routing, middleware, template engines, etc.	Event-driven, non-blocking I/O, etc.
-Dependencies	Node.js	N/A
-Popularity	Very popular	Very popular
+
+Feature	      Express.js	                                  Node.js
+Type	        Framework                                	    Runtime environment
+Language	    JavaScript	                                  JavaScript
+Purpose	      To build web applications	                    To run JavaScript code outside of a browser
+Features	    Routing, middleware, template engines, etc.  	Event-driven, non-blocking I/O, etc.
+Dependencies	Node.js                                      	N/A
+Popularity	  Very popular                                	Very popular
 Examples	GitHub, Uber, Netflix	PayPal, LinkedIn, Walmart
+
 6. What is the difference between a traditional server and an Express.js server?
-A traditional server is a standalone server that is built and managed independently. While an Express.js server is built using the Express.js framework. It runs on top of Node.js. Express.js provides a simple and efficient way to create and manage web applications. It offers a wide range of features and tools for handling routing, middleware, and request or response objects.
+
+A traditional server is a standalone server that is built and managed independently.
+While an Express.js server is built using the Express.js framework.
+It runs on top of Node.js. Express.js provides a simple and efficient way to create and manage web applications. 
+It offers a wide range of features and tools for handling routing, middleware, and request or response objects.
 
 7. How does Express.js handle error handling?
-Express.js provides an error-handling system that allows developers to define and manage error-handling middleware functions. These functions can be used to catch and handle errors that make in the application. It can be added to the application using the app.use() method.
+
+Express.js provides an error-handling system that allows developers to define and manage error-handling middleware functions. 
+These functions can be used to catch and handle errors that make in the application. 
+It can be added to the application using the app.use() method.
 
 8. What is a template engine, and how does Express.js use it?
-A template engine is a tool used to generate HTML or other output based on dynamic data. Express.js supports several template engines, such as EJS and Handlebars. These engines can dynamically render HTML pages based on data stored in the application.
+
+A template engine is a tool used to generate HTML or other output based on dynamic data. 
+Express.js supports several template engines, such as EJS and Handlebars. 
+These engines can dynamically render HTML pages based on data stored in the application.
 
 9. How does Express.js handle file uploads?
-Express.js provides support for file uploads through middleware functions and the request object. Developers can use middleware functions like multer or busboy to handle file uploads. It can access the uploaded files through the request object.
+
+Express.js provides support for file uploads through middleware functions and the request object. 
+Developers can use middleware functions like multer or busboy to handle file uploads.
+It can access the uploaded files through the request object.
 
 10. Mention some of the databases with which Express JS is integrated.
+
 Below are some of the databases that Express JS supports:
 
 MySQL
@@ -44,29 +70,46 @@ MongoDB
 PostgreSQL
 SQLite
 Oracle
+
 11. How does Express.js differ from other Node.js frameworks?
-Express.js is a flexible framework that provides only the essential features required for web application development. On the other hand, other Node.js frameworks, such as Meteor, Sails.js, and Koa.js, offer more features but may not be required for smaller projects. Express.js is a good choice for simple, fast, and scalable web applications.
+
+Express.js is a flexible framework that provides only the essential features required for web application development. 
+On the other hand, other Node.js frameworks, such as Meteor, Sails.js, and Koa.js, offer more features but may not be required for smaller projects. 
+Express.js is a good choice for simple, fast, and scalable web applications.
+
 
 12. How do you handle errors in Express.js?
-Express.js provides a built-in error-handling mechanism using the next() function. When an error occurs, you can pass it to the next middleware or route handler using the next() function. You can also add an error-handling middleware to your application that will be executed whenever an error occurs.
+
+Express.js provides a built-in error-handling mechanism using the next() function.
+When an error occurs, you can pass it to the next middleware or route handler using the next() function. 
+You can also add an error-handling middleware to your application that will be executed whenever an error occurs.
 
 13. What are middleware functions in Express.js?
-Middleware functions are those functions that can access and modify the request and response objects in an Express application. They can add functionality to an application, such as logging, authentication, and error handling.
+
+Middleware functions are those functions that can access and modify the request and response objects in an Express application. 
+They can add functionality to an application, such as logging, authentication, and error handling.
 
 14. What is a callback function in Express.js?
-A callback function in Express.js is a type of function that is called after a specific action has occurred. For example, a callback function handles a successful or failed database query.
+
+A callback function in Express.js is a type of function that is called after a specific action has occurred. 
+For example, a callback function handles a successful or failed database query.
 
 15. What is the primary use of Express.js?
+
 Express.js is primarily used to build server-side web applications and RESTful APIs using Node.js.
 
 16. How do you install Express.js in a project?
+
 You can install Express.js using the following command:
 
 npm install express
+
 17. What is the default port used in Express.js applications?
+
 Express.js applications typically use port 3000 by default.
 
 18. How can you create a simple API using Express.js?
+
 const express = require('express');
 const app = express();
 
@@ -75,88 +118,129 @@ app.get('/', (req, res) => {
 });
 
 app.listen(3000);
+
 19. What are the core features of Express.js?
+
 Routing
 Middleware
 Templating engines
 Error handling
 Static file serving
+
 20. How do you handle form data in Express.js?
+
 Use the express.urlencoded() middleware to parse form data.
 
 app.use(express.urlencoded({ extended: true }));
+
 21. How do you terminate the request-response cycle in Express.js?
+
 Use res.send(), res.json(), or res.end() methods to terminate the request-response cycle.
 
 Express JS Interview Questions and Answers For Intermediate
+
 22. What is the difference between res.send() and res.json() in Express.js?
-res.send() is used to send a response with any type of data (string, object, buffer, etc.). While res.json() is used to send a JSON response. res.json() also sets the Content-Type header to application or JSON.
+
+res.send() is used to send a response with any type of data (string, object, buffer, etc.). 
+While res.json() is used to send a JSON response. res.json() also sets the Content-Type header to application or JSON.
 
 23. What is the use of app.use() in Express.js?
-app.use() is used to add middleware functions to an Express application. It can be used to add global middleware functions or to add middleware functions to specific routes.
+
+app.use() is used to add middleware functions to an Express application. 
+It can be used to add global middleware functions or to add middleware functions to specific routes.
 
 24. What is the purpose of the next() function in Express.js?
-The next() function is used to pass control from one middleware function to the next function. It is used to execute the next middleware function in the chain.
+
+The next() function is used to pass control from one middleware function to the next function. 
+It is used to execute the next middleware function in the chain.
 
 25. What is the difference between app.route() and app.use() in Express.js?
-app.route() defines multiple route handlers for a single route. While the app.use() function is used to add middleware functions to an application.
+
+app.route() defines multiple route handlers for a single route. 
+While the app.use() function is used to add middleware functions to an application.
 
 26. What is the purpose of the req.params object in Express.js?
-The req.params object is used to access route parameters in Express.js. Route parameters capture values from the URL and pass them to the request handler.
+
+The req.params object is used to access route parameters in Express.js. 
+Route parameters capture values from the URL and pass them to the request handler.
 
 27. What is the difference between req.query and req.params in Express.js?
-req.query is used to access the query parameters in a URL. While req.params is used to access route parameters in a URL.
+req.query is used to access the query parameters in a URL. 
+While req.params is used to access route parameters in a URL.
 
 28. What is the purpose of the app.locals object in Express.js?
-The app.locals object stores application-level data in an Express.js application. This data is available to all templates and routes.
+
+The app.locals object stores application-level data in an Express.js application. 
+This data is available to all templates and routes.
 
 29. How do you perform URL redirection in Express.js?
+
 Use the res.redirect() method:
 
 res.redirect('/home');
-30. How can you set cookies in Express.js?
-Use the res.cookie() method:
 
+30. How can you set cookies in Express.js?
+
+Use the res.cookie() method:
 res.cookie('username', 'John');
+
 31. How can you delete cookies in Express.js?
+
 Use the res.clearCookie() method:
 
 res.clearCookie('username');
+
 32. What is app.all() used for in Express.js?
+
 The app.all() method is used to handle all HTTP methods for a specific route.
 
 33. How do you handle 404 errors in Express.js?
+
 Create middleware at the end of the route handlers:
 
 app.use((req, res) => {
   res.status(404).send('Page Not Found');
 });
+
 34. What is app.set() used for in Express.js?
+
 The app.set() method is used to set application-level properties like view engine or port.
 
 35. How do you handle JSON data in Express.js?
+
 Use the express.json() middleware:
 
 app.use(express.json());
+
 36. What is the difference between app.locals and res.locals?
+
 app.locals: Application-level data shared across all requests.
 res.locals: Request-specific data available only in the current request.
+
 37. How do you define route groups in Express.js?
+
 Route groups can be defined using express.Router().
 
 const router = express.Router();
 router.get('/users', (req, res) => res.send('User List'));
 app.use('/api', router);
-38. How can you serve dynamic content using Express.js?
-Use template engines like EJS or Pug with Express.js.
 
+
+38. How can you serve dynamic content using Express.js?
+
+Use template engines like EJS or Pug with Express.js.
 Express JS Interview Questions and Answers For Advanced
+
 39. How do you implement JWT-based authentication in Express.js?
+
 Use the jsonwebtoken package:
 
 const jwt = require('jsonwebtoken');
 jwt.sign({ id: user.id }, 'secretKey', { expiresIn: '1h' });
+
+
 40. How can you perform request validation in Express.js?
+
 Use the express-validator middleware:
 
 const { check, validationResult } = require('express-validator');
@@ -166,6 +250,7 @@ app.post('/user', [check('email').isEmail()], (req, res) => {
     return res.status(400).json({ errors: errors.array() });
   }
 });
+
 41. How do you upload files using Multer in Express.js?
 const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
